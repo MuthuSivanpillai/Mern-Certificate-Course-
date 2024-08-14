@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1{
+            text-align: center;
+            text-shadow: 10px;
+            border: 15px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+    <input type="text" id="input_id"/>  
+    <h1 id ="h1_id">Hi this is Javascript Heading</h1>
+    <h2 id ="h2_id">Hi this is the subset of Heading</h2>
+    <button onclick="changeText()">Click</button>
+</div>
+</body>
+<script>
+    function changeText(){
+    let val = document.getElementById("input_id").value;
+    console.log(val)
+    document.getElementById("h1_id").innerHTML="this is from js"
+    document.getElementById("h2_id").innerHTML=val
+    }
+</script>
+</html>

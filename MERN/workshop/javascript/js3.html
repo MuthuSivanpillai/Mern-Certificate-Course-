@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Box Validation</title>
+    <style>
+        .dc{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+        /* Default styles for the text box */
+        input[type="text"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        /* Red border style when the input is empty */
+        input[type="text"].error {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="dc1">
+        <label for="textBox">Enter something:</label>
+        <input type="text" id="textBox" placeholder="Type here...">
+    </div>
+    <button onclick="validateInput()">Submit</button>
+
+    <script>
+        function validateInput() {
+            const textBox = document.getElementById("textBox");
+
+            // Check if the text box is empty
+            if (textBox.value.trim() === "") {
+                // If empty, add the 'error' class to apply the red border
+                textBox.classList.add("error");
+            } else {
+                // If it has value, remove the 'error' class
+                textBox.classList.remove("error");
+            }
+        }
+    </script>
+</body>
+</html>

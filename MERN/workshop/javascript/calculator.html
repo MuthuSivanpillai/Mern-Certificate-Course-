@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cal1 {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            border: 5px solid red;
+            flex-direction: column;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="cal1">
+        <h1> CALCULATOR </h1>
+        <input type="number" id="no1" placeholder="Enter the Number1"/>
+        <input type="number" id="no2" placeholder="Enter the Number2"/>
+        <button type="submit" onclick="addfun()">Addition</button>
+        <button type="submit" onclick="subfun()">Subraction</button>
+        <button type="submit">Multiplication</button>
+        <button type="submit">Division</button>
+    </div>
+</body>
+<script>
+    function addfun(){
+        val1 = document.getElementById('no1').value;
+        val2 = document.getElementById('no2').value;
+        numOne = val1;
+        numTwo = val2;
+        sum = Number(numOne)+Number(numTwo);
+  
+  document.write("Sum = " + sum); 
+  
+    }
+    function subfun(){
+        val1 = document.getElementById('no1').value;
+        val2 = document.getElementById('no2').value;
+        numOne = val1;
+        numTwo = val2;
+        sub = Number(numOne)-Number(numTwo);
+  
+  document.write("Sub = " + sub);
+  
+    }
+</script>
+</html>
